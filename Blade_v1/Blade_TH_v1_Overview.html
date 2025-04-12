@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🧩 Blade_TH_v1 Project Overview</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #101820;
+      color: white;
+      line-height: 1.6;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    summary {
+      font-size: 1.25rem;
+      cursor: pointer;
+      margin: 1rem 0;
+    }
+    details {
+      background: #1c1c1c;
+      border-left: 4px solid #00ffc3;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+    code {
+      background: #333;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧩 Blade_TH_v1 – Project Overview & Learnings</h1>
+
+  <details open>
+    <summary>📦 Blade Layout System</summary>
+    <p>We used a modular <code>.blade</code> container system with a flex-based layout inside <code>.blade-content</code>. This allowed us to build each page with a consistent structure using two groups: <code>.text-group</code> and <code>.visual-group</code>.</p>
+  </details>
+
+  <details>
+    <summary>🔄 Procedural Alternating Layout</summary>
+    <p>To alternate layouts automatically, we used the <code>:nth-child(even)</code> selector in CSS. This flips the flex direction of every second blade using:</p>
+    <pre><code>.blade:nth-child(even) .blade-content {
+  flex-direction: row-reverse;
+}</code></pre>
+  </details>
+
+  <details>
+    <summary>🔠 Reveal Text Animation</summary>
+    <p>Each block of text appears using a vertical mask reveal effect. This was built using <code>IntersectionObserver</code> and a CSS <code>@keyframes</code> animation applied to <code>.text-reveal</code> when its parent blade enters the viewport.</p>
+  </details>
+
+  <details>
+    <summary>🧭 Navigation Arrows</summary>
+    <p>Top and bottom arrows were added using Unicode characters <code>↑</code> and <code>↓</code>. They were made hover-animated with CSS bounce effects using <code>@keyframes</code> and positioned with <code>fixed</code> CSS layout.</p>
+  </details>
+
+  <details>
+    <summary>📐 Responsive & Expanding Blades</summary>
+    <p>To allow long content or stacked elements to expand naturally, we switched from <code>height: 100vh</code> to <code>min-height: 100vh</code> on each <code>.blade</code>. This makes each blade start full screen but grow vertically if needed.</p>
+  </details>
+
+  <details>
+    <summary>📚 What We Learned</summary>
+    <ul>
+      <li>💡 How to structure HTML containers for flexible layouts</li>
+      <li>🎨 How to animate elements with scroll-triggered observers</li>
+      <li>🧱 How to build modular, reusable page sections</li>
+      <li>⚡ How to avoid clipping issues using <code>min-height</code></li>
+      <li>🎛️ How to apply automatic alternating layouts with no JS</li>
+    </ul>
+  </details>
+
+</body>
+</html>

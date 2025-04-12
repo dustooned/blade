@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Xbox Blade UI - Vertical Reveal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <button class="menu-toggle" id="menuToggle">☰</button>
+
+  <div class="sidebar" id="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <li>Home</li>
+      <li>Games</li>
+      <li>Settings</li>
+      <li>Profile</li>
+    </ul>
+  </div>
+
+  <div id="prev" class="arrow top">&#8593;</div>
+  <div id="next" class="arrow bottom">&#8595;</div>
+
+  <div class="blade-container">
+    <div class="blade" style="--i:0">
+      <div class="blade-content">
+        <div class="text-group">
+          <div class="text-mask"><div class="text-reveal">Games</div></div>
+          <div class="text-mask"><div class="text-reveal"><h2>Start Playing</h2></div></div>
+          <div class="text-mask"><div class="text-reveal"><p>Multiplayer Mode is now available!</p></div></div>
+        </div>
+        <div class="visual-group">
+          <div class="text-mask"><div class="text-reveal">[Lottie Placeholder]</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="blade" style="--i:1">
+      <div class="blade-content">
+        <div class="text-group">
+          <div class="text-mask"><div class="text-reveal">Media</div></div>
+          <div class="text-mask"><div class="text-reveal"><h2>Music Library</h2></div></div>
+          <div class="text-mask"><div class="text-reveal"><p>Streaming Now</p></div></div>
+        </div>
+        <div class="visual-group">
+          <div class="text-mask"><div class="text-reveal">[Media SVG Placeholder]</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="blade" style="--i:2">
+      <div class="blade-content">
+        <div class="text-group">
+          <div class="text-mask"><div class="text-reveal">System</div></div>
+          <div class="text-mask"><div class="text-reveal"><h2>Settings</h2></div></div>
+          <div class="text-mask"><div class="text-reveal"><p>Storage Options</p></div></div>
+        </div>
+        <div class="visual-group">
+          <div class="text-mask"><div class="text-reveal">[System SVG Placeholder]</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="blade" style="--i:3">
+      <div class="blade-content">
+        <div class="text-group">
+          <div class="text-mask"><div class="text-reveal">Profile</div></div>
+          <div class="text-mask"><div class="text-reveal"><h2>Achievements</h2></div></div>
+          <div class="text-mask"><div class="text-reveal"><p>Friends List</p></div></div>
+        </div>
+            <div class="visual-group">
+              <div class="text-mask"><div class="text-reveal">[Lottie Placeholder]</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="visual-group">
+          <div class="text-mask"><div class="text-reveal">[Profile SVG Placeholder]</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
